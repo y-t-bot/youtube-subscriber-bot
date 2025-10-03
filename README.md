@@ -1,9 +1,10 @@
-# youtube subscriber bot
+# youtube-views-bot  
 
-Automate safe, human-like subscription workflows on YouTube for testing, QA, and controlled growth experiments. This repo gives you a modular toolkit (CLI + API) to orchestrate multi-profile sessions, proxies, and action pacing.
+Automated solution for simulating YouTube views at scale.  
+Designed for testing, research, and educational purposes, this toolkit helps developers understand YouTube’s behavior, proxies, and automation flows.  
 
 <p align="center"> 
-  <a href="https://github.com/yourusername/youtube sub bot">
+  <a href="https://github.com/yourusername/youtube-view-bot">
     <img src="https://img.shields.io/badge/Try%20It%20Free-1E90FF?style=for-the-badge&logo=fire&logoColor=white" alt="Try it Free" width="30%">
   </a> 
 </p>
@@ -17,25 +18,22 @@ Automate safe, human-like subscription workflows on YouTube for testing, QA, and
   </a>
 </p>
 
-## Introduction
-**youtube sub bot** is a browser-automation toolkit for YouTube subscription flows. Built for growth teams, SDET/QA engineers, and researchers who need reproducible, rate-limited, multi-profile actions with logs and an optional REST API. It focuses on stability, observability, and safety controls—not spammy blast behavior.
+---
 
-**Key Benefits**
-- **Time-saving:** one command to spin up N sessions with rotating profiles & proxies.  
-- **Scalable:** run headless workers horizontally via Docker or PM2.  
-- **Safer:** randomized human-like delays, jitter, per-account caps, and error backoff.
+##  Introduction  
 
-## Features
-- Headless/headed runs via **Playwright** (Node) or **Selenium** (Python) adapters.  
-- Profile management (local JSON, GoLogin/AdsPower adapters, or basic cookies).  
-- Proxy rotation + geo rules; per-run concurrency limits with queue.  
-- Action pacing (randomized wait, scroll, dwell) to mimic human behavior.  
-- CLI + lightweight REST API server for programmatic control.  
-- Structured logs (JSON), run summaries, and retry/backoff policies.  
-- .env-driven config with per-profile overrides.
+The **youtube-view-bot** is a research automation project to simulate YouTube traffic patterns.  
+It’s built for developers and testers who want to study YouTube’s engagement flows, proxy rotation, and multi-instance management.  
+
+###  Key Benefits  
+- **Time-Saving** → Automates repetitive tasks like refreshing and watching videos.  
+- **Scalable** → Run multiple sessions with rotating proxies and accounts.  
+- **Safer Testing** → Designed with anti-detect browsers and sandboxing to reduce risk.  
+
+---
 
 <p align="center">
-  <img src="youtube-sub-bot.png" alt="youtube-sub-bot hero" width="80%" hight="70%">
+  <img src="youtube-views-bot.png" alt="youtube-bot hero" width="80%">
 </p>
 
 
@@ -50,13 +48,27 @@ Automate safe, human-like subscription workflows on YouTube for testing, QA, and
   </a>
 </p>
 
-## Use Cases
-- QA testing of subscription UX across geos and device fingerprints.  
-- Controlled growth experiments with compliance-friendly rate limits.  
-- Internal tooling to verify channel discovery and funnel steps.  
-- Lab/demo environments to showcase automation orchestration patterns.
+##  Features  
+- Automated YouTube video view generation  
+- Proxy support (residential, datacenter, mobile)  
+- Headless & visible browser automation (Playwright/Selenium)  
+- Randomized watch times & intervals for natural behavior  
+- Multi-session control (parallel execution)  
+- Configurable via `.env`  
+- Docker-ready for deployment  
 
-## Contact
+---
+
+##  Use Cases  
+- Load testing YouTube video pages  
+- Studying engagement metrics and retention  
+- Research on proxy & browser fingerprinting  
+- Demonstration of automation flows in social media apps  
+
+---
+
+##  Contact  
+
 <p align="center">
   <a href="https://discord.gg/vBu9huKBvy">
     <img src="https://img.shields.io/badge/Join-Discord-5865F2?logo=discord" alt="Join Discord">
@@ -68,17 +80,35 @@ Automate safe, human-like subscription workflows on YouTube for testing, QA, and
 
 ---
 
-## Installation Instructions
+##  Installation  
 
-### Pre-requisites
-- **Node.js** ≥ 18 and **npm** or **pnpm**
-- **Python** ≥ 3.10 (optional Python worker)
-- **Docker** (optional, for containerized runs)
-- **Git**
-- (Optional) **GoLogin/AdsPower** if using external profile managers
-- Proxies (HTTP/SOCKS) if required
+###  Pre-requisites  
+- Python **3.9+** or Node.js **18+**  
+- Playwright / Selenium  
+- Docker (optional)  
 
-### Clone
+###  Steps  
+
 ```bash
-git clone "https://github.com/yourusername/youtube sub bot"
-cd "youtube sub bot"
+# Clone repo
+git clone https://github.com/yourusername/youtube-view-bot
+cd youtube-view-bot
+
+# Python Install
+pip install -r requirements.txt
+
+# OR Node Install
+npm install
+
+# Copy config
+cp .env.example .env
+
+# Run (Python)
+python main.py
+
+# Run (Node)
+node index.js
+
+# Run with Docker
+docker build -t youtube-view-bot .
+docker run --env-file .env youtube-view-bot

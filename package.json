@@ -1,0 +1,13 @@
+{
+  "name": "youtube-bot",
+  "version": "1.0.0",
+  "description": "youtube-bot — automation toolkit",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "playwright": "^1.48.0",
+    "dotenv": "^16.4.0"
+  }
+}
