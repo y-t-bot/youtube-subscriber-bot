@@ -1,4 +1,4 @@
-# youtube sub bot
+# youtube subscriber bot
 
 Automate safe, human-like subscription workflows on YouTube for testing, QA, and controlled growth experiments. This repo gives you a modular toolkit (CLI + API) to orchestrate multi-profile sessions, proxies, and action pacing.
 
